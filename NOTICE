@@ -1,0 +1,22 @@
+This distribution contains original implementation and original-paraphrase
+instructions informed by Li Lu's investment research, Ray Dalio's macroeconomic
+frameworks, Anthropic Financial Services workflows, HV analysis and bounded
+coordinator patterns. See docs/source-reuse-matrix.md and method-audit.md.
+
+No book text, private notes, Atlas database, upstream financial code, CE runtime,
+model credentials, third-party API access or spreadsheet engine is bundled.
+Referencing a method does not transfer its source's license or claim endorsement.
+
+Optional dependencies are separately installed: openpyxl (MIT), et-xmlfile (MIT),
+and an actual recalculation engine such as LibreOffice (its own license). Their
+license obligations apply when independently installed or redistributed.
+
+Bundled editorial skill: skills/humanizer-zh, local revision 2026-11-06,
+from Humanizer-zh (https://github.com/op7418/Humanizer-zh).
+Copyright (c) 2026 歸藏. Distributed under the included MIT LICENSE.
+See skills/humanizer-zh/provenance.json for source identity and content hashes,
+and its SKILL.md for the local revision's source acknowledgements.
+
+0.3.0: Understand Anything v1.0.8 methods inform the original package-local understanding-and-visuals guide. The upstream workflow/text is not bundled or a runtime dependency. Humanizer-zh attribution and MIT notices remain unchanged.
+
+The report-depth workflow is informed by user-requested comparison with HV analysis. The packaged counter and acceptance implementation are locally authored; no external HV installation or report is a runtime dependency.
