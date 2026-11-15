@@ -1,6 +1,6 @@
 # William Stock Analysis
 
-可独立安装的股票深度研究 Skills Package。当前公开版本：**0.3.5**。
+可独立安装的股票深度研究 Skills Package。当前公开版本：**0.3.6**。
 
 **[下载最新版安装包](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz)** · **[版本说明与校验文件](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest)**
 
@@ -54,15 +54,15 @@ PYTHONPATH="$STOCK_SKILLS_ROOT/william-stock-analysis/package/runtime" python3 -
 
 ## 版本与完整性
 
-0.3.5 安装包保持原已验收字节不变。归档内 README 标题误写为 0.3.4；`manifest.json`、`pyproject.toml` 和运行时版本均为 **0.3.5**。这是文档标题错误，不影响本次版本身份。
+0.3.6 将三至五年生存、破产重组与退市分析纳入报告交付检查。233 项包内测试和四种隔离安装布局已通过。
 
 安装包 SHA-256：
 
 ```text
-c5085dc939e9cc2c5496e068d1e5c243a05029fc5a599b4258cc10964e835b06
+c9e75c7e6797c9374f32b2a4b389e253437657e85f75f88380b1b5d91b72d3ab
 ```
 
-`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v0.3.5](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v0.3.5)。
+`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v0.3.6](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v0.3.6)。
 
 ## 许可
 
