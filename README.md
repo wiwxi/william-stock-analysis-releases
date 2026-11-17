@@ -1,6 +1,6 @@
 # William Stock Analysis
 
-可独立安装的股票深度研究 Skills Package。当前公开版本：**0.3.6**。
+可独立安装的股票深度研究 Skills Package。当前公开版本：**0.3.7**。
 
 **[下载最新版安装包](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz)** · **[版本说明与校验文件](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest)**
 
@@ -17,7 +17,7 @@
 
 下载安装包并解压，得到 `william-stock-analysis/` 文件夹。把该文件夹交给支持本地 skills 的 AI 助手，并发送：
 
-> 请读取这个 William Stock Analysis package 的 README 和安装说明，确认当前助手实际使用的持久化 skills 目录。先核验 manifest.json 中的文件摘要，再运行 installation/install.py 的预览；确认仅处理本包所属文件后执行安装，不覆盖其他技能或人工改动。完成后核对 15 个技能入口，并报告运行依赖和当前环境限制。
+> 请读取这个 William Stock Analysis package 的 README 和安装说明，确认当前助手实际使用的持久化 skills 目录。先核验 manifest.json 中的文件摘要，再运行 installation/install.py 的预览；确认仅处理本包所属文件后执行安装，不覆盖其他技能或人工改动。完成后核对 14 个 William 入口及包内 humanizer（共 15 个 skills），并报告运行依赖和当前环境限制。
 
 具体宿主是否支持 SKILL.md、能否访问网络和运行本地程序，取决于宿主本身。文件包不能单靠上传聊天窗口就保证完成持久化安装。
 
@@ -54,15 +54,15 @@ PYTHONPATH="$STOCK_SKILLS_ROOT/william-stock-analysis/package/runtime" python3 -
 
 ## 版本与完整性
 
-0.3.6 将三至五年生存、破产重组与退市分析纳入报告交付检查。233 项包内测试和四种隔离安装布局已通过。
+0.3.7 增加安全边际依据合同：逐项追溯风险和剩余误差，支持实际重算与判断性区间，分别验收计算和依据，并在相关报告章节同源披露。此前的三至五年生存风险要求继续保留。258 项包内测试全部通过（无跳过），四种隔离安装布局通过。
 
 安装包 SHA-256：
 
 ```text
-c9e75c7e6797c9374f32b2a4b389e253437657e85f75f88380b1b5d91b72d3ab
+c1f787e17176abf396669905a9300da4c225eff04767df843fdfd1fde7a5df0e
 ```
 
-`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v0.3.6](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v0.3.6)。
+`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v0.3.7](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v0.3.7)。
 
 ## 许可
 
