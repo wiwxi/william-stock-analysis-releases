@@ -1,6 +1,6 @@
 # William Stock Analysis
 
-可独立安装的股票深度研究 Skills Package。当前公开版本：**0.3.7**。
+可独立安装的股票深度研究 Skills Package。当前公开版本：**1.0.0**。
 
 **[下载最新版安装包](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz)** · **[版本说明与校验文件](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest)**
 
@@ -54,15 +54,15 @@ PYTHONPATH="$STOCK_SKILLS_ROOT/william-stock-analysis/package/runtime" python3 -
 
 ## 版本与完整性
 
-0.3.7 增加安全边际依据合同：逐项追溯风险和剩余误差，支持实际重算与判断性区间，分别验收计算和依据，并在相关报告章节同源披露。此前的三至五年生存风险要求继续保留。258 项包内测试全部通过（无跳过），四种隔离安装布局通过。
+1.0.0 固化完整研究的八节结构、投资判断摘要、同源情景价格和定量安全边际。报告需说明下行保护、三至五年存续与普通股权利，并写清买入条件、等待原因与复查触发。独立复核、润色保真和实际正文复验均纳入正式发布流程。
 
 安装包 SHA-256：
 
 ```text
-c1f787e17176abf396669905a9300da4c225eff04767df843fdfd1fde7a5df0e
+9261151ee9c488dfaf017cedd7a211a0df7183654bd0df2e413a8f5e374352cb
 ```
 
-`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v0.3.7](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v0.3.7)。
+`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v1.0.0](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v1.0.0)。
 
 ## 许可
 

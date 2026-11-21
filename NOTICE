@@ -11,7 +11,7 @@ Optional dependencies are separately installed: openpyxl (MIT), et-xmlfile (MIT)
 and an actual recalculation engine such as LibreOffice (its own license). Their
 license obligations apply when independently installed or redistributed.
 
-Bundled editorial skill: skills/humanizer-zh, local revision 2026-11-06,
+Bundled editorial skill: skills/humanizer-zh, local revision 2026-11-20,
 from Humanizer-zh (https://github.com/op7418/Humanizer-zh).
 Copyright (c) 2026 歸藏. Distributed under the included MIT LICENSE.
 See skills/humanizer-zh/provenance.json for source identity and content hashes,
