@@ -1,29 +1,29 @@
 # William Stock Analysis
 
-可独立安装的股票深度研究 Skills Package。当前公开版本：**2.2.0**。
+A standalone skill package for in-depth equity research. Current public release: **2.2.0**.
 
-**[下载最新版安装包](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz)** · **[版本说明与校验文件](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest)**
+**[Download the installation package](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz)** · **[Release notes and checksums](https://github.com/wiwxi/william-stock-analysis-releases/releases/latest)**
 
-## 包含什么
+## What's included
 
-- 14 个 William 股票研究 skills，以及随包提供的 humanizer-zh。
-- 八部分投资报告框架、商业模式与参与方分析、财务与风险分析、图文说明。
-- 情景估值、定量安全边际、可复算工作簿接口及独立审查流程。
-- 安装程序、运行代码、模板、方法说明、测试与许可证。
+- 14 William Stock Analysis skills and the bundled `humanizer-zh` editorial skill.
+- An eight-section investment report, with business model and stakeholder analysis, financial and risk analysis, and supporting visuals.
+- Scenario valuation, a quantitative margin of safety, a recalculable workbook interface, and an independent review workflow.
+- The installer, runtime, templates, methodology, tests, and licenses.
 
-此仓库仅发布技能安装包及其使用文件，不提供作者的公司研究报告、Obsidian 笔记、个人工作区、账户凭据或付费数据权限。下载者无需访问其他仓库。
+The download includes the skills and their supporting files. It requires no access to another repository. Research reports, private notes, account credentials, and paid data access stay with their owners.
 
-## 最简单的安装方式
+## Install with an AI assistant
 
-下载安装包并解压，得到 `william-stock-analysis/` 文件夹。把该文件夹交给支持本地 skills 的 AI 助手，并发送：
+Download and extract the archive to get the `william-stock-analysis/` directory. Give the directory to an assistant that supports local skills and ask:
 
-> 请读取这个 William Stock Analysis package 的 README 和安装说明，确认当前助手实际使用的持久化 skills 目录。先核验 manifest.json 中的文件摘要，再运行 installation/install.py 的预览；确认仅处理本包所属文件后执行安装，不覆盖其他技能或人工改动。完成后核对 14 个 William 入口及包内 humanizer（共 15 个 skills），并报告运行依赖和当前环境限制。
+> Read the package README and installation instructions. Identify the persistent skills directory used by this assistant. Verify the hashes in manifest.json and preview installation with installation/install.py. Apply only when the preview is limited to package-owned files and preserves unrelated skills and manual edits. Then verify all 14 William skill entry points and the bundled humanizer-zh, and report the dependencies and any limits of this host.
 
-具体宿主是否支持 SKILL.md、能否访问网络和运行本地程序，取决于宿主本身。文件包不能单靠上传聊天窗口就保证完成持久化安装。
+Persistent installation requires a host that supports local `SKILL.md` files and can run the installer. Network access depends on the host.
 
-## 命令行安装
+## Install from the command line
 
-需要 Python 3.11 或更高版本。在新目录中下载并验证：
+Use Python 3.11 or later. Download and verify the archive in an empty directory.
 
 ```sh
 curl -fL -o william-stock-analysis.tar.gz https://github.com/wiwxi/william-stock-analysis-releases/releases/latest/download/william-stock-analysis.tar.gz
@@ -33,7 +33,7 @@ tar -xzf william-stock-analysis.tar.gz
 cd william-stock-analysis
 ```
 
-Linux 如无 `shasum`，可用 `sha256sum -c SHA256SUMS`。然后把下面示例路径替换为当前助手实际使用的 skills 目录：
+On Linux, use `sha256sum -c SHA256SUMS` if `shasum` is unavailable. Set the path to the skills directory your assistant actually uses.
 
 ```sh
 STOCK_SKILLS_ROOT="/absolute/path/to/your/skills"
@@ -42,28 +42,26 @@ python3 installation/install.py --package . --manifest manifest.json --root "$ST
 PYTHONPATH="$STOCK_SKILLS_ROOT/william-stock-analysis/package/runtime" python3 -m william_stock capabilities
 ```
 
-第一条安装命令预览变更，带 `--apply` 的命令才执行安装。实际使用前，应确认宿主已经发现新技能。生成和重算工作簿还需要包内说明列出的依赖及真实重算引擎；安装包不包含模型服务、数据授权或 LibreOffice。
+The first installer command previews changes. The second applies them. Confirm that your host discovers the new entries before using them. Creating and recalculating workbooks requires the dependencies listed in the package and a working spreadsheet engine, such as LibreOffice. Use your own model and authorized data sources.
 
-## 使用示例
+## Example request
 
-安装完成并让宿主发现技能后，可以说：
+> Use william-stock-analysis to research the stock I specify. In eight sections, explain the investment judgment, business model, shareholder returns, industry context, market pricing, downside risks, buy conditions, and supporting evidence. State the data cutoff, show scenario prices, and quantify the margin of safety.
 
-> 使用 william-stock-analysis，对我指定的股票进行完整深度研究。按八部分结构说明投资判断、商业模式、股东回报、行业环境、市场定价、下行风险、买入条件和核查依据；明确数据截止时间，提供情景价格和定量安全边际。
+Research quality depends on the evidence and the capabilities available to the host. The package makes no promise about returns or forecast accuracy.
 
-研究结果依赖实际可取得的证据与运行能力，技能不承诺收益或预测准确性。
+## Version and integrity
 
-## 版本与完整性
+Version 2.2.0 standardizes the opening valuation table at six columns and cross-checks every cell against the delivered Markdown and workbook formulas. It also includes the evidence-gap checks and conditional buy ceilings introduced in 2.1.0, plus single-stock screening, batch aggregation, full research, and periodic thesis reviews.
 
-2.2.0 将首页估值表固定为六列，并逐格核对实际 Markdown 和工作簿公式结果。本版也包含 2.1.0 的证据缺口检验和待条件满足时才生效的买入上限，以及单股初筛、批量汇总、完整研究和阶段性事后复核。
-
-安装包 SHA-256：
+Archive SHA-256:
 
 ```text
 3217b8835a22fc06b30dfc5ff0c6b2741710e2943fde623b7529f128581e7c68
 ```
 
-`releases/latest` 始终指向最新正式发布；需要固定版本时，使用 [v2.2.0](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v2.2.0)。
+For a pinned version, use [v2.2.0](https://github.com/wiwxi/william-stock-analysis-releases/releases/tag/v2.2.0).
 
-## 许可
+## License
 
-保留包内原有许可与第三方声明，见 [LICENSE](LICENSE) 和 [NOTICE](NOTICE)。公开提供下载不将其他来源材料或第三方服务一并授权。
+See [LICENSE](LICENSE) and [NOTICE](NOTICE) for the package terms and third-party attributions. The public download grants only the rights stated in those files.
